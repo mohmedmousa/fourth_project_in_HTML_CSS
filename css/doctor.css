@@ -1,0 +1,476 @@
+:root {
+    --main_color: rgb(15, 51, 92);
+    --second_color: #3397e9;
+    --third_color: #777;
+    --fourth_color: #e7e3e3;
+    --main_transation: .4s;
+}
+body {
+    font-family: "Cairo", sans-serif;
+  }
+* {
+    box-sizing: border-box;
+    --moz-box-sizing: border-box
+    --webkit-box-sizing: border-box;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+.main_head {
+    font-size: 30px;
+    color: var(--main_color);
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}  
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: none;
+}
+.header {
+    padding: 15px;
+    background-image: url(../images/medical.jpg);
+    background-size: cover;
+    position: relative;
+    height: 100%;
+
+}
+.header .button {
+    position: absolute;
+    right: 15px;
+    margin: 20px;
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+    
+}
+.header .button a {
+    color: black;   
+}
+.header .button li{
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+.header .button li:first-child {
+    background-color: var(--main_color);
+    margin-right: 20px;
+    
+    
+}
+.header .button li .log {
+    color: white;
+
+}
+.header .button li:last-child {
+    border: 1px solid var(--second_color);
+
+    
+}
+.header .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    padding: 40px;
+}
+.header .info p {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main_color);
+    margin: 20px;
+    padding-top: 100px;
+}
+.header .info .fill {
+    background-color: white;
+    border: 1px solid var(--second_color);
+    border-radius: 10px;
+    width: 50%;
+
+}
+.header .info .fill ul {
+    border: 1px solid var(--second_color);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+.header .info .fill ul li a {
+    color: black;
+    padding-bottom: 10px;
+}
+.header .info .fill ul li a:hover {
+    color: var(--second_color);
+    border-bottom: 1px solid var(--second_color);
+    transition: var(--main_transation);
+}
+.header .info .fill form {
+    display: grid;
+    padding: 20px;
+    
+}
+.header .info .fill form input {
+    padding: 20px;
+    margin: 20px 0;
+    border: none;
+    background-color: rgb(227, 233, 238);
+
+}
+.header .info .fill form hr {
+    position: relative;
+    color: black;
+    width: 100%;
+}
+.header .info .fill form hr::before {
+    content: "OR";
+    position: absolute;
+    left: 46%;
+    bottom: -12px;
+    background-color: white;
+    padding: 5px;
+}
+.header .info .fill form input[type="submit"]{
+    display: block;
+    background-color: var(--main_color);
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+}
+@media (max-width:768px){
+    .header .info {
+        flex-direction: column;
+    }
+}
+/*start look*/
+
+.look .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 70px;
+    height: 300px;
+    text-align: center;
+    margin: 100px 0 ;
+    
+}
+
+/*
+.look .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1f));
+    gap: 50px;
+    height: 300px;
+
+}
+*/
+.look .box1 {
+    background-image: url(../images/medical1.jpg);
+    background-size: cover;
+    position: relative;
+}
+.look .box2 {
+    background-image: url(../images/pharmacy.jpg);
+    background-size: cover;
+    position: relative;
+
+}
+.look .box3 {
+    background-image: url(../images/lab.jpg);
+    background-size: cover;
+    position: relative;
+}
+.look .content .box1::before,
+.look .content .box2::before,
+.look .content .box3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,.3);
+}
+.look .content .info {
+    position: absolute;
+    top: 40%;
+    right: 35%;
+}
+.look .content .info p {
+    font-size: 30px;
+    color: white;
+
+}
+.look .content .info a{
+    background-color: var(--main_color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+@media (max-width:768px) {
+    .look .content {
+        height: 100%;
+    
+    }
+    .look .content div {
+        min-width: 200px;
+        padding-bottom: 250px;
+
+    }
+}
+/*start booking*/
+.booking {
+    padding: 15px 15px 60px;
+    background-color: var(--fourth_color);
+    position: relative;
+}
+.booking >p {
+    font-size: 20px;
+    color: var(--third_color);
+    padding: 10px 150px;
+}
+.booking .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px,1fr));
+    gap: 40px;
+    padding: 10px 100px;
+}
+.booking .content .box {
+    background-color: white;
+    padding: 10px;
+    min-width: 230px;
+
+}
+.booking .content .box img {
+    width: 100%;
+    height: 230px;
+    max-width: 300px;
+}
+.booking .content .box h1{
+    font-size: 20px;
+}
+.booking .content .box p {
+    color: var(--third_color);
+}
+.booking .content .box .filled {
+    color: yellow;
+    padding-bottom: 20px;
+}
+.booking .content .box div {
+    color: var(--third_color);
+    
+}
+.booking .content .box div i {
+    padding-right: 10px;
+    padding-bottom: 20px;
+
+}
+.booking .content .box .buttons {
+    padding: 15px 0;
+}
+.booking .content .box div a:first-child {
+    border: 1px solid var(--second_color);
+    padding: 0 5px;
+    border-radius: 5px;
+    margin: 0 10px 20px 5px;
+}
+.booking .content .box div a:last-child {
+    background-color: var(--main_color);
+    border-radius: 5px;
+    padding: 0 5px;
+    color: white;
+}
+.booking .content .box a:last-child{
+    padding-left: 30px;
+    color: var(--main_color);
+}
+.booking .bullets {
+    position: absolute;
+    z-index: 10000;
+    display: flex;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    list-style: none;
+
+}
+.booking .bullets li {
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--second_color);
+    border-radius: 50%;
+    margin-right: 10px;
+    z-index: 5;
+}
+.booking .bullets li:nth-child(2) {
+    background-color: var(--second_color);
+    top: 10px;
+}
+
+/* start news*/
+.news {
+    padding: 20px 0 120px ;
+}
+.news p {
+    color: #777;
+    padding: 15px 100px;
+}
+.news .content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(500px,1fr));
+   grid-gap: 60px;
+
+}
+.news .content .box {
+    position: relative;
+    box-shadow: 5px 5px 5px 1px var(--third_color);
+    max-width: 600px;
+}
+.news .content .box img:first-child {
+    width: 100%;
+    border: 2px solid white;
+    height: 250px;
+}
+.news .content .box img:nth-child(2) {
+    position: absolute;
+    left: 2%;
+    top: 150px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--second_color);
+}
+.news .content .box .icon {
+    position: absolute;
+    top: 260px;
+    right: 10px;
+    color: var(--third_color);
+}
+h2, h3 , .news .content .box .text {
+    padding-left: 20px ;
+} 
+h2 {
+    padding-top: 50px;
+}
+.news .content .box .text {
+    color: var(--third_color);
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+.news a:last-child{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin: 30px 0;
+    border: 1px solid var(--second_color);
+    max-width: fit-content;
+    left: 50%;
+    transform: translateX(-60%);
+    padding: 10px 30px;
+    color: var(--second_color);
+    font-size: 25px;
+    border-radius: 10px;
+
+}
+/*start works*/
+.works {
+    background-color: var(--fourth_color);
+    padding-bottom: 60px;
+}
+.works .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(500px,1fr));
+    grid-gap: 60px;
+    padding-top: 40px;
+ 
+ }
+ .works .content .box {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px var(--third_color);
+    max-width: 600px;
+
+ }
+ .works .content i {
+    padding: 30px 0 0 20px;
+    color: var(--second_color);
+    font-size: 40px;
+ }
+ .works .content h2 {
+    padding-top: 10px;
+ }
+ .works .content p {
+    color: var(--third_color);
+    padding-left: 20px;
+ }
+ /*start footer*/
+
+.footer {
+    padding: 30px 50px 10px;
+}
+.footer .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(250px,1fr));
+    gap: 40px;
+}
+.footer .content .box1 div i {
+    font-size: 100px;
+    color: var(--second_color);
+}
+.footer .content .box1 p {
+    color: var(--third_color);
+    font-size: 20px;
+}
+.footer .content .box1 ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.footer .content .box2 li ,
+.footer .content .box3 li {
+    color: var(--third_color);
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.footer .content .box4{
+    min-width: 300px;
+}
+.footer .content .box4 div {
+    display: flex;
+    color: var(--third_color);
+    padding: 0 0px 20px 20px;
+}
+.footer .content .box4 div i {
+    font-size: 30px;
+    padding-right: 10px;
+    color: var(--main_color);
+}
+.footer .content .box4 div p {
+    display: inline-block;
+}
+.footer .content .box4 a{
+    color: var(--third_color);
+}
